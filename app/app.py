@@ -19,7 +19,7 @@ def index():
         data = {'title': title, 'author': author, 'publication_year': publication_year, 'genre': genre}
 
         # Send a POST request to the API
-        response = requests.post(os.environ.get(BOOKS_API_URL), data=data)
+        response = requests.post(os.environ.get("BOOKS_API_URL"), data=data)
         
         # Get the JSON response from the API
         filtered_books = response.json()
