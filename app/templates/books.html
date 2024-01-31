@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Filtered Books</h1>
+        <div class="book-container">
+            {% for book in books %}
+                <div class="book-card">
+                    <h2>{{ book['title'] }}</h2>
+                    <p>Author: {{ book['author'] }}</p>
+                    <p>Publication Year: {{ book['publication_year'] }}</p>
+                    <p>Genre: {{ book['genre'] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
